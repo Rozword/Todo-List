@@ -1,204 +1,211 @@
-body{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-#container{
-    
-    display: grid;
-    grid-template-columns: 10fr 1fr 2fr;
-    grid-template-rows: 1fr 10fr;
-    grid-template-areas: 
+body {
+  margin: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 10fr 1fr 2fr;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
     "header header header"
     "projectsList leftSide rightSide";
-    gap: 50px;
-    
+  gap: 50px;
 }
 
-#header{
-    grid-area: header;
-    display: flex;
-    justify-self: start;
-    
-    gap: 50px;
-    
+#header {
+  grid-area: header;
+  display: flex;
+  justify-self: start;
+
+  gap: 50px;
 }
 
-#leftSide{
-    grid-area: leftSide;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    
+#leftSide {
+  grid-area: leftSide;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
-#rightSide{
-    grid-area: rightSide;
+#rightSide {
+  grid-area: rightSide;
 }
 
-#projectsList{
-    grid-area: projectsList;
-    
-    
-    background-color: white;
-    border-radius: 8px;
-    padding-bottom: 20px;
+#projectsList {
+  grid-area: projectsList;
+
+  background-color: white;
+  border-radius: 8px;
+  padding-bottom: 20px;
 }
 
-.project{
-    font-weight: bolder;
-    width: 30%;    
-    height: 3rem;
-    font-size: 1.8rem;
-    background-color: lightpink;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-    text-align: center;
-    overflow: auto;
-    box-shadow: 1px 4px 4px 0px gray;
+.project {
+  font-weight: bolder;
+  width: 30%;
+  height: 3rem;
+  font-size: 1.8rem;
+  background-color: lightpink;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  text-align: center;
+  overflow: auto;
+  box-shadow: 1px 4px 4px 0px gray;
 }
 
-.projectDiv{
-    width: 95%;
-    border-right: 5px rgb(109, 223, 185) solid;
-    border-bottom: 5px rgb(109, 223, 185) solid;
-    border-bottom-right-radius: 20px;
-    box-shadow: 8px 8px 8px 0px gray;
-    padding-bottom: 15px;
-    overflow: hidden;
-
+.projectDiv {
+  width: 95%;
+  border-right: 5px rgb(109, 223, 185) solid;
+  border-bottom: 5px rgb(109, 223, 185) solid;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 8px 8px 8px 0px gray;
+  padding-bottom: 15px;
+  overflow: hidden;
 }
 
-.todoField{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    
+.todoField {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.todoDiv{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    border-bottom: 3px darkgoldenrod solid;    
-    margin-bottom: 25px;
-    background-color: #e8ebe6;
-    box-shadow: 1px 4px 4px 0px gray;
-    z-index: 0;
+.todoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  border-bottom: 3px darkgoldenrod solid;
+  margin-bottom: 25px;
+  background-color: #e8ebe6;
+  box-shadow: 1px 4px 4px 0px gray;
+  z-index: 0;
 }
 
-.addFeatures{
-    
-    background-color: rgb(56, 56, 56);
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    width: 10%;
-    align-self: flex-end;
-
+.addFeatures {
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 10%;
+  align-self: flex-end;
 }
 
-.todo{
-    width: 50%;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    border-bottom: black solid 1px;
-    background-color: #e8ebe6;
-    border-right: 3px goldenrod solid;
-    border-bottom: 3px goldenrod solid;
-    border-top: 3px goldenrod solid;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-    box-shadow: 2px 4px 3px 0px gray;
-    text-align: center;
-    z-index: 1;
-    background-color: #f2eecb;
+.todo {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border-bottom: black solid 1px;
+  background-color: #e8ebe6;
+  border-right: 3px goldenrod solid;
+  border-bottom: 3px goldenrod solid;
+  border-top: 3px goldenrod solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 2px 4px 3px 0px gray;
+  text-align: center;
+  z-index: 1;
+  background-color: #f2eecb;
 }
 
-#addProjectDiv{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding: 10px;
-    
-   
+#addProjectDiv {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px;
 }
 
-#addProject, #addTodo{
-    background-color: rgb(56, 56, 56);
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    border: none;
-    border-radius: 20px;
-    padding: 1px 10px;
+#addProject,
+#addTodo {
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: 20px;
+  padding: 1px 10px;
 }
 
-#addProject:hover, #addTodo:hover{
-    box-shadow: 0px 0px 20px black;
-    transition: 1s;
-    
+#addProject:hover,
+#addTodo:hover {
+  box-shadow: 0px 0px 20px black;
+  transition: 1s;
 }
 
-#addProject:focus, #addTodo:focus{
-    box-shadow: 0px 0px 20px darkgoldenrod;
-    transition: 0.5;    
+#addProject:focus,
+#addTodo:focus {
+  box-shadow: 0px 0px 20px darkgoldenrod;
+  transition: 0.5;
 }
 
-#addProjectForm, #addTodoForm, #addFeaturesForm{
-    display: none;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    border: 1px solid black;
-    padding: 20px;
-    padding-top: 5px;
-    background-color: rgba(127, 255, 212, 0.726);
-    z-index: 2;
-    
+#addProjectForm,
+#addTodoForm,
+#addFeaturesForm,
+#editForm {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  border: 1px solid black;
+  padding: 20px;
+  padding-top: 5px;
+  background-color: rgba(127, 255, 212, 0.726);
+  z-index: 2;
 }
-#closeProjectDiv{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: start;
-}
-
-#closeProjectButton{
-    border: none;
-    background-color: rgb(59, 59, 59);
-    color: white;
-    font-weight: bolder;
-    border-radius: 10px;
+#closeProjectDiv {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
 }
 
-#closeFormButton:hover{
-    box-shadow: 0px 0px 10px black
+#closeProjectButton {
+  border: none;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
 }
 
-.featuresDiv{
-    width: 75%;
-    padding: 8px;
-    font-size: 1.2rem;
-    border-bottom: black solid 1px;
-    margin-left: 50px;
-    border: 3px goldenrod solid;    
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 4px 3px 0px gray;
-    z-index: 0;
-    background-color: #f2eecb;
-    
-    
+#closeFormButton:hover {
+  box-shadow: 0px 0px 10px black;
+}
+
+.featuresDiv {
+  display: flex;
+  justify-content: flex-start;
+  width: 75%;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-bottom: black solid 1px;
+  margin-left: 50px;
+  border: 3px goldenrod solid;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 4px 3px 0px gray;
+  z-index: 0;
+  background-color: #f2eecb;
+}
+
+.headingsDiv > p,
+.infoDiv > p {
+  border-bottom: silver 2px solid;
+}
+
+.headingsDiv > p {
+  font-weight: bold;
 }
