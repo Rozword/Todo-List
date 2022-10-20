@@ -1,112 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-        <p>Awesome Todo List</p>
-        <p>Know about us</p>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <form onsubmit="return false" id="newProjectForm" class="form" action="">
+    <button type="button" class="closeButton" id="closeProjectForm" >X</button>
+    <label for="projectTitle">Enter your Project's title</label>
+    <input id="projectTitle" type="text">
+    <button id="createProject">Create</button>
+  </form>
+
+  <form onsubmit="return false" id="newTodoForm" class="form" action="">
+    <button type="button" class="closeButton" id="closeTodoForm" >X</button>
+    <label for="">Enter your Todo's title</label>
+    <input id="todoTitle" type="text">
+    <label for="projectParent">Which project will you add this Todo to?</label>
+    <input id="projectParent" type="text">
+    <button id="createTodo">Create</button>
+  </form>
+
+  <form onsubmit="return false" id="addAttributeForm" class="form" action="">
+    <button type="button" class="closeButton" id="closeAddAttributeForm" >X</button>
+    <label for="descriptionAttribute">Enter a description</label>
+    <input id="descriptionAttribute" type="text">
+    <label for="priorityAttribute">Enter a priority</label>
+    <input id="priorityAttribute" type="text">
+    <button id="addAttribute">Add Attributes</button>
+  </form>
+
+  <div id="container">
+
+    <button id="newProject">New Project</button>    
+    <button id="newTodo" >New Todo</button>
+
+    <div id="first" class="project">
+      <div class="projectTitleDiv">
+        <h2 class="projectTitle">First Project</h2>
+        <img class="show" src="icons/angle-small-right.svg" alt="">
+        <img class="close" src="icons/angle-small-down.svg" alt="">
       </div>
-      <div id="leftSide">
-        <p>Total Todos</p>
-        <p>Pending Todos</p>
-        <p>Completed Todos</p>
-      </div>
-      <div id="projectsList">
-        <div id="addProjectDiv">
-          <label for="addTodo">Add Todo</label>
-          <button id="addTodo">+</button>
-          <label for="addProject">Add project</label>
-          <button id="addProject">+</button>
+      <div class="todosContainer">
+        <div class="todo">
+          <p class="description">First Todo</p>
+          <p class="dueDate">Tomorrow</p>
+          <p class="notes">Remember to keep everything organized</p>
+          <button class="edit">Edit</button>        
         </div>
-        <div class="projectDiv">
-          <p class="project">Study</p>
-          <div class="todoField"></div>
+        
+        <div class="todo">
+          <p class="description">Second Todo</p>
+          <p class="dueDate">Today</p>
+          <p class="notes">Do this right away</p>
+          <button class="edit">Edit</button>     
+          
         </div>
       </div>
-      <div id="rightSide"></div>
     </div>
-    <div id="addProjectForm">
-      <div id="closeProjectDiv">
-        <button id="closeProjectButton">X</button>
-      </div>
-      <label for="projectTitle">Enter your new project's title</label><br />
-      <input type="text" name="projectTitle" id="projectTitle" /><br />
-      <input
-        type="button"
-        name="enterProjectTitle"
-        id="enterProjectTitle"
-        value="Create"
-      />
-    </div>
+      
+      <div id="second" class="project">
+        <div class="projectTitleDiv">
+          <h2 class="projectTitle">Second Project</h2>
+          <img class="show" src="icons/angle-small-right.svg" alt="">
+          <img class="close" src="icons/angle-small-down.svg" alt="">
+        </div>
+        <div class="todosContainer">
+          <div class="todo">
+            <p class="description">Third Todo</p>
+            <p class="dueDate">Tuesday</p>
+            <p class="notes">Whenever you can</p>
+            <button class="edit">Edit</button>        
+          </div>
+          
+          <div class="todo">
+            <p class="description">Fourth Todo</p>
+            <p class="dueDate">Sunday</p>
+            <p class="notes">Hey there</p>
+            <button class="edit">Edit</button>     
+          </div>
+        </div>
 
-    <div id="addTodoForm">
-      <div id="closeTodoDiv">
-        <button id="closeTodoButton">X</button>
-      </div>
-      <label for="todoTitle">Enter your new Todo's title</label><br />
-      <input type="text" name="todoTitle" id="todoTitle" /><br />
-      <label for="projectChoice">Where do you want to add this Todo?</label
-      ><br />
-      <input
-        type="text"
-        name="projectChoice"
-        id="projectChoice"
-        placeholder="Enter Project's name"
-      />
-      <input
-        type="button"
-        name="enterTodoTitle"
-        id="enterTodoTitle"
-        value="Create"
-      />
     </div>
-
-    <div id="addFeaturesForm">
-      <div id="closeFeaturesDiv">
-        <button id="closeFeaturesButton">X</button>
-      </div>
-      <label for="description">Enter a description</label>
-      <input type="text" name="description" id="description" /><br />
-      <label for="dueDate">Enter a due date</label>
-      <input type="text" name="dueDate" id="dueDate" /><br />
-      <label for="priority">Choose a priority:</label>
-      <input type="radio" id="low" name="priority" value="Low" />
-      <label for="low">Low</label>
-      <input type="radio" id="mid" name="priority" value="Mid" />
-      <label for="mid">Mid</label>
-      <input type="radio" id="high" name="priority" value="High" />
-      <label for="high">High</label><br />
-      <label for="checklist">Add Checklist?</label>
-      <input type="checkbox" name="checklist" id="checklist" /><br />
-      <label for="notes">Enter your notes</label>
-      <input type="textarea" id="notes" name="notes" /><br />
-      <input
-        type="button"
-        name="enterFeatures"
-        id="enterFeatures"
-        value="Add features"
-      />
-    </div>
-
-    <div id="editForm">
-      <div id="closeFeaturesDiv">
-        <button id="closeFeaturesButton">X</button>
-      </div>
-      <label for="editDescription">Enter a description</label>
-      <input type="text" name="editDescription" id="editDescription" /><br />
-      <label for="editDueDate">Enter a due date</label>
-      <input type="text" name="editDueDate" id="editDueDate" /><br />
-      <label for="editNotes">Enter your notes</label>
-      <input type="textarea" id="editNotes" name="editNotes" /><br />
-      <input type="button" name="enterEdits" id="enterEdits" value="Edit" />
-    </div>
-  </body>
+  
+  
+</body>
 </html>
