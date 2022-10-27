@@ -10,83 +10,71 @@
 </head>
 <body>
   <form onsubmit="return false" id="newProjectForm" class="form" action="">
-    <button type="button" class="closeButton" id="closeProjectForm" >X</button>
+    <!-- <button type="button" class="closeButton" id="closeProjectForm" >X</button><br> -->
     <label for="projectTitle">Enter your Project's title</label>
-    <input id="projectTitle" type="text">
-    <button id="createProject">Create</button>
+    <input id="projectTitle" type="text"><br><br>
+    <div class="formButtons">
+      <button id="createProject">Create</button>
+      <button type="button" class="closeButton" id="closeProjectForm" >Close</button><br>
+    </div>
   </form>
 
   <form onsubmit="return false" id="newTodoForm" class="form" action="">
-    <button type="button" class="closeButton" id="closeTodoForm" >X</button>
+    <!-- <button type="button" class="closeButton" id="closeTodoForm" >X</button><br> -->
     <label for="">Enter your Todo's title</label>
-    <input id="todoTitle" type="text">
-    <label for="projectParent">Which project will you add this Todo to?</label>
-    <input id="projectParent" type="text">
-    <button id="createTodo">Create</button>
+    <input id="todoTitle" type="text"><br>
+    <label for="projectParent">Which project will it go to?</label>
+    <input id="projectParent" type="text"><br><br>
+    <div class="formButtons">
+      <button id="createTodo">Create</button>
+      <button type="button" class="closeButton" id="closeTodoForm" >Close</button><br>
+    </div>
   </form>
 
-  <form onsubmit="return false" id="addAttributeForm" class="form" action="">
-    <button type="button" class="closeButton" id="closeAddAttributeForm" >X</button>
+  <form onsubmit="return false" id="addAttributeForm" class="form" action="">    
     <label for="descriptionAttribute">Enter a description</label>
     <input id="descriptionAttribute" type="text">
-    <label for="priorityAttribute">Enter a priority</label>
-    <input id="priorityAttribute" type="text">
-    <button id="addAttribute">Add Attributes</button>
+    <label for="priorityAttribute">Select a priority</label>    
+    <select name="" id="priorityAttribute">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br>
+    <label for="dueDateAttribute">Enter a Due Date</label>
+    <input type="date" name="" id="dueDateAttribute"><br><br>
+    <div class="formButtons">
+      <button id="addAttribute">Add Attributes</button>
+      <button type="button" class="closeButton" id="closeAddAttributeForm" >Close</button><br>
+    </div>
   </form>
 
+  <form onsubmit="return false" id="editForm" class="form" action="">    
+    <label for="editDescription">Edit your description</label>
+    <input id="editDescription" type="text">
+    <label for="editPriority">Edit your priority</label>
+    <select name="" id="editPriority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br>
+    <label for="editDueDate">Edit your Due Date</label>
+    <input type="date" name="" id="editDueDate"><br><br>
+    <div class="formButtons">
+      <button id="enterEdit">Enter your Edits</button>
+      <button type="button" class="closeButton" id="closeEditForm" >Close</button><br>
+    </div>
+  </form>
+  <div id="wrapper" >
+  <div id="header">Todo List!</div>
   <div id="container">
-
-    <button id="newProject">New Project</button>    
-    <button id="newTodo" >New Todo</button>
-
-    <div id="first" class="project">
-      <div class="projectTitleDiv">
-        <h2 class="projectTitle">First Project</h2>
-        <img class="show" src="icons/angle-small-right.svg" alt="">
-        <img class="close" src="icons/angle-small-down.svg" alt="">
-      </div>
-      <div class="todosContainer">
-        <div class="todo">
-          <p class="description">First Todo</p>
-          <p class="dueDate">Tomorrow</p>
-          <p class="notes">Remember to keep everything organized</p>
-          <button class="edit">Edit</button>        
-        </div>
-        
-        <div class="todo">
-          <p class="description">Second Todo</p>
-          <p class="dueDate">Today</p>
-          <p class="notes">Do this right away</p>
-          <button class="edit">Edit</button>     
-          
-        </div>
-      </div>
+    <div id="buttonsContainer" >
+      <button class="mainButtons" id="newProject">New Project</button>    
+      <button class="mainButtons" id="newTodo">New Todo</button>
+      <button class="mainButtons" id="openProjects">Open Every Project</button>
+      <button class="mainButtons" id="closeProjects">Close Every Project</button>
     </div>
-      
-      <div id="second" class="project">
-        <div class="projectTitleDiv">
-          <h2 class="projectTitle">Second Project</h2>
-          <img class="show" src="icons/angle-small-right.svg" alt="">
-          <img class="close" src="icons/angle-small-down.svg" alt="">
-        </div>
-        <div class="todosContainer">
-          <div class="todo">
-            <p class="description">Third Todo</p>
-            <p class="dueDate">Tuesday</p>
-            <p class="notes">Whenever you can</p>
-            <button class="edit">Edit</button>        
-          </div>
-          
-          <div class="todo">
-            <p class="description">Fourth Todo</p>
-            <p class="dueDate">Sunday</p>
-            <p class="notes">Hey there</p>
-            <button class="edit">Edit</button>     
-          </div>
-        </div>
-
-    </div>
-  
+  </div>
+  </div>  
   
 </body>
 </html>
